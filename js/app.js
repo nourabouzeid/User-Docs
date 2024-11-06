@@ -183,18 +183,22 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-28>"
+                "x-parser-schema-id": "<anonymous-schema-29>"
               },
               "userName": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-29>"
+                "x-parser-schema-id": "<anonymous-schema-30>"
               },
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-30>"
+                "x-parser-schema-id": "<anonymous-schema-31>"
+              },
+              "liked": {
+                "type": "boolean",
+                "x-parser-schema-id": "<anonymous-schema-32>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-27>"
+            "x-parser-schema-id": "<anonymous-schema-28>"
           },
           "x-parser-message-name": "<anonymous-message-8>"
         }
@@ -221,6 +225,10 @@
               "profilePic": {
                 "type": "string",
                 "x-parser-schema-id": "<anonymous-schema-26>"
+              },
+              "liked": {
+                "type": "boolean",
+                "x-parser-schema-id": "<anonymous-schema-27>"
               }
             },
             "x-parser-schema-id": "<anonymous-schema-22>"
@@ -240,18 +248,18 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-37>"
+                "x-parser-schema-id": "<anonymous-schema-39>"
               },
               "userName": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-38>"
+                "x-parser-schema-id": "<anonymous-schema-40>"
               },
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-39>"
+                "x-parser-schema-id": "<anonymous-schema-41>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-36>"
+            "x-parser-schema-id": "<anonymous-schema-38>"
           },
           "x-parser-message-name": "<anonymous-message-10>"
         }
@@ -265,22 +273,22 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-32>"
+                "x-parser-schema-id": "<anonymous-schema-34>"
               },
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-33>"
+                "x-parser-schema-id": "<anonymous-schema-35>"
               },
               "userName": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-34>"
+                "x-parser-schema-id": "<anonymous-schema-36>"
               },
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-35>"
+                "x-parser-schema-id": "<anonymous-schema-37>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-31>"
+            "x-parser-schema-id": "<anonymous-schema-33>"
           },
           "x-parser-message-name": "<anonymous-message-9>"
         }
@@ -297,10 +305,10 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-44>"
+                "x-parser-schema-id": "<anonymous-schema-46>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-43>"
+            "x-parser-schema-id": "<anonymous-schema-45>"
           },
           "x-parser-message-name": "<anonymous-message-12>"
         }
@@ -314,14 +322,14 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-41>"
+                "x-parser-schema-id": "<anonymous-schema-43>"
               },
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-42>"
+                "x-parser-schema-id": "<anonymous-schema-44>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-40>"
+            "x-parser-schema-id": "<anonymous-schema-42>"
           },
           "x-parser-message-name": "<anonymous-message-11>"
         }
