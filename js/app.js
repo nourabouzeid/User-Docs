@@ -13,6 +13,62 @@
     }
   },
   "channels": {
+    "status": {
+      "description": "Channel for status and last seen.",
+      "subscribe": {
+        "operationId": "setStatus",
+        "message": {
+          "contentType": "application/json",
+          "payload": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Online",
+                  "Offline",
+                  "Away"
+                ],
+                "x-parser-schema-id": "<anonymous-schema-6>"
+              }
+            },
+            "x-parser-schema-id": "<anonymous-schema-5>"
+          },
+          "x-parser-message-name": "<anonymous-message-2>"
+        }
+      },
+      "publish": {
+        "operationId": "getStatus",
+        "message": {
+          "contentType": "application/json",
+          "payload": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "integer",
+                "x-parser-schema-id": "<anonymous-schema-2>"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "Online",
+                  "Offline",
+                  "Away"
+                ],
+                "x-parser-schema-id": "<anonymous-schema-3>"
+              },
+              "lastSeen": {
+                "type": "string",
+                "format": "date-time",
+                "x-parser-schema-id": "<anonymous-schema-4>"
+              }
+            },
+            "x-parser-schema-id": "<anonymous-schema-1>"
+          },
+          "x-parser-message-name": "<anonymous-message-1>"
+        }
+      }
+    },
     "pfp": {
       "description": "Channel for setting pfp.",
       "subscribe": {
@@ -24,12 +80,12 @@
             "properties": {
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-5>"
+                "x-parser-schema-id": "<anonymous-schema-11>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-4>"
+            "x-parser-schema-id": "<anonymous-schema-10>"
           },
-          "x-parser-message-name": "<anonymous-message-2>"
+          "x-parser-message-name": "<anonymous-message-4>"
         }
       },
       "publish": {
@@ -41,16 +97,16 @@
             "properties": {
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-2>"
+                "x-parser-schema-id": "<anonymous-schema-8>"
               },
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-3>"
+                "x-parser-schema-id": "<anonymous-schema-9>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-1>"
+            "x-parser-schema-id": "<anonymous-schema-7>"
           },
-          "x-parser-message-name": "<anonymous-message-1>"
+          "x-parser-message-name": "<anonymous-message-3>"
         }
       }
     },
@@ -65,20 +121,20 @@
             "properties": {
               "content": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-13>"
+                "x-parser-schema-id": "<anonymous-schema-19>"
               },
               "media": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-14>"
+                "x-parser-schema-id": "<anonymous-schema-20>"
               },
               "type": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-15>"
+                "x-parser-schema-id": "<anonymous-schema-21>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-12>"
+            "x-parser-schema-id": "<anonymous-schema-18>"
           },
-          "x-parser-message-name": "<anonymous-message-4>"
+          "x-parser-message-name": "<anonymous-message-6>"
         }
       },
       "publish": {
@@ -90,29 +146,29 @@
             "properties": {
               "id": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-7>"
+                "x-parser-schema-id": "<anonymous-schema-13>"
               },
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-8>"
+                "x-parser-schema-id": "<anonymous-schema-14>"
               },
               "content": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-9>"
+                "x-parser-schema-id": "<anonymous-schema-15>"
               },
               "media": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-10>"
+                "x-parser-schema-id": "<anonymous-schema-16>"
               },
               "date": {
                 "type": "string",
                 "format": "date-time",
-                "x-parser-schema-id": "<anonymous-schema-11>"
+                "x-parser-schema-id": "<anonymous-schema-17>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-6>"
+            "x-parser-schema-id": "<anonymous-schema-12>"
           },
-          "x-parser-message-name": "<anonymous-message-3>"
+          "x-parser-message-name": "<anonymous-message-5>"
         }
       }
     },
@@ -127,17 +183,20 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-22>"
+                "x-parser-schema-id": "<anonymous-schema-28>"
               },
-              "userId": {
-                "type": "integer",
-                "description": "id of the user who's story got liked",
-                "x-parser-schema-id": "<anonymous-schema-23>"
+              "userName": {
+                "type": "string",
+                "x-parser-schema-id": "<anonymous-schema-29>"
+              },
+              "profilePic": {
+                "type": "string",
+                "x-parser-schema-id": "<anonymous-schema-30>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-21>"
+            "x-parser-schema-id": "<anonymous-schema-27>"
           },
-          "x-parser-message-name": "<anonymous-message-6>"
+          "x-parser-message-name": "<anonymous-message-8>"
         }
       },
       "publish": {
@@ -149,24 +208,24 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-17>"
+                "x-parser-schema-id": "<anonymous-schema-23>"
               },
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-18>"
+                "x-parser-schema-id": "<anonymous-schema-24>"
               },
               "userName": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-19>"
+                "x-parser-schema-id": "<anonymous-schema-25>"
               },
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-20>"
+                "x-parser-schema-id": "<anonymous-schema-26>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-16>"
+            "x-parser-schema-id": "<anonymous-schema-22>"
           },
-          "x-parser-message-name": "<anonymous-message-5>"
+          "x-parser-message-name": "<anonymous-message-7>"
         }
       }
     },
@@ -181,17 +240,20 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-30>"
+                "x-parser-schema-id": "<anonymous-schema-37>"
               },
-              "userId": {
-                "type": "integer",
-                "description": "id of the user who's story got liked",
-                "x-parser-schema-id": "<anonymous-schema-31>"
+              "userName": {
+                "type": "string",
+                "x-parser-schema-id": "<anonymous-schema-38>"
+              },
+              "profilePic": {
+                "type": "string",
+                "x-parser-schema-id": "<anonymous-schema-39>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-29>"
+            "x-parser-schema-id": "<anonymous-schema-36>"
           },
-          "x-parser-message-name": "<anonymous-message-8>"
+          "x-parser-message-name": "<anonymous-message-10>"
         }
       },
       "publish": {
@@ -203,24 +265,24 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-25>"
+                "x-parser-schema-id": "<anonymous-schema-32>"
               },
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-26>"
+                "x-parser-schema-id": "<anonymous-schema-33>"
               },
               "userName": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-27>"
+                "x-parser-schema-id": "<anonymous-schema-34>"
               },
               "profilePic": {
                 "type": "string",
-                "x-parser-schema-id": "<anonymous-schema-28>"
+                "x-parser-schema-id": "<anonymous-schema-35>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-24>"
+            "x-parser-schema-id": "<anonymous-schema-31>"
           },
-          "x-parser-message-name": "<anonymous-message-7>"
+          "x-parser-message-name": "<anonymous-message-9>"
         }
       }
     },
@@ -235,12 +297,12 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-36>"
+                "x-parser-schema-id": "<anonymous-schema-44>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-35>"
+            "x-parser-schema-id": "<anonymous-schema-43>"
           },
-          "x-parser-message-name": "<anonymous-message-10>"
+          "x-parser-message-name": "<anonymous-message-12>"
         }
       },
       "publish": {
@@ -252,16 +314,16 @@
             "properties": {
               "storyId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-33>"
+                "x-parser-schema-id": "<anonymous-schema-41>"
               },
               "userId": {
                 "type": "integer",
-                "x-parser-schema-id": "<anonymous-schema-34>"
+                "x-parser-schema-id": "<anonymous-schema-42>"
               }
             },
-            "x-parser-schema-id": "<anonymous-schema-32>"
+            "x-parser-schema-id": "<anonymous-schema-40>"
           },
-          "x-parser-message-name": "<anonymous-message-9>"
+          "x-parser-message-name": "<anonymous-message-11>"
         }
       }
     }
